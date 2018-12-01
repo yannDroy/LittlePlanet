@@ -1,19 +1,19 @@
-CC = gcc
-OPTIONS = -Wall -lm -g -lglut -lGLU -lGL -lm
+CC = gccYann
+OPTIONS = -Wall -g -lGL -lGLU -lglut -lm
 
 all: LittlePlanet
 
 LittlePlanet : affichage.o generation.o visu.o main.o
-	$(CC) $(OPTIONS) affichage.o generation.o visu.o main.o -o LittlePlanet
+	$(CC) affichage.o generation.o visu.o main.o -o LittlePlanet $(OPTIONS)
 
 affichage.o : affichage.c affichage.h
-	$(CC) $(OPTIONS) affichage.c -c
+	$(CC) -c affichage.c $(OPTIONS)
 generation.o : generation.c generation.h
-	$(CC) $(OPTIONS) generation.c -c
+	$(CC) -c generation.c $(OPTIONS)
 visu.o: visu.c visu.h
-	$(CC) $(OPTIONS) -c visu.c
+	$(CC) -c visu.c $(OPTIONS)
 main.o: main.c
-	$(CC) $(OPTIONS) -c main.c
+	$(CC) -c main.c $(OPTIONS)
 
 clean :
 	rm LittlePlanet *.o

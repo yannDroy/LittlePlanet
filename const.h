@@ -21,20 +21,20 @@
 #define CENTRE_Z 0
 
 #define DEFAUT_RAYON 100
-#define MAX_RAYON 100000
+#define MAX_RAYON 500
 
 #define DEFAUT_PAS 2
 
 #define DEFAUT_FREQ 3
-#define MAX_FREQ 10
+#define MAX_FREQ 1000
 
 #define DEFAUT_OCT 4
-#define MAX_OCT 10
+#define MAX_OCT 1000
 
 #define DEFAUT_LISS 3
-#define MAX_LISS 10
+#define MAX_LISS 1000
 
 #define DEFAUT_PERS 0.5
-#define MAX_PERS 0.5
+#define MAX_PERS 1.0
 
 #endif

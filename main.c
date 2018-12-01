@@ -4,8 +4,8 @@
 #include <time.h>
 #include <unistd.h>
 
-#include "GL/gl.h"
-#include "GL/glut.h"
+#include <GL/gl.h>
+#include <GL/glut.h>
 
 #include "const.h"
 #include "struct.h"
@@ -82,7 +82,7 @@ int main (int argc, char *argv[]){
            frequence <= 0 || frequence > MAX_FREQ ||
            octaves <= 0 || octaves > MAX_OCT ||
            liss < 0 || liss > MAX_LISS ||
-           persistance <= 0.0 || persistance > 0.5){
+           persistance <= 0.0 || persistance > MAX_PERS){
            
             usage(argv[0]);
             return EXIT_FAILURE;
@@ -125,7 +125,7 @@ int main (int argc, char *argv[]){
 
     for(i = 0; i < octaves; i++)
         detruire_carte(&cartes[i]);
-    detruire_liste_cartes(cartes);
+    detruire_liste_cartes();
 
     return EXIT_SUCCESS;
 }

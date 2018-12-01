@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "GL/gl.h"
-#include "GL/glut.h"
+#include <GL/gl.h>
+#include <GL/glut.h>
 
 #include "const.h"
 #include "struct.h"
@@ -127,7 +127,7 @@ void key_pressed (unsigned char key, int x, int y){
 
         for(i = 0; i < octaves; i++)
             detruire_carte(&cartes[i]);
-        detruire_liste_cartes(cartes);
+        detruire_liste_cartes();
 
         creer_planete();
         
@@ -138,7 +138,7 @@ void key_pressed (unsigned char key, int x, int y){
 
         for(i = 0; i < octaves; i++)
             detruire_carte(&cartes[i]);
-        detruire_liste_cartes(cartes);
+        detruire_liste_cartes();
 
         exit(EXIT_SUCCESS);
     }

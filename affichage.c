@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "GL/gl.h"
-#include "GL/glut.h"
+#include <GL/gl.h>
+#include <GL/glut.h>
 
 #include "const.h"
 #include "struct.h"
@@ -55,7 +55,7 @@ void init_oeil (){
 void init_lumiere (){
     GLfloat blanc[4] = {1.0, 1.0, 1.0, 1.0};
     
-    int position_lumiere[4] = {oeil.x, oeil.y, oeil.z, 1.0};
+    int position_lumiere[4] = {(int)oeil.x, (int)oeil.y, (int)oeil.z, 1};
     GLfloat direction[3] = {CENTRE_X, CENTRE_Y, CENTRE_Z};
 
     glEnable(GL_LIGHTING);
